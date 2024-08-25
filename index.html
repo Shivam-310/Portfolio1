@@ -15,24 +15,59 @@
         margin: 0;
         padding: 0;
       }
-
       body {
         background-color: rgb(4, 4, 80);
         color: white;
         font-family: 'Poppins', sans-serif;
       }
-
       nav{
         display: flex;
         justify-content: space-around;
         align-items: center;
+        height: 80px;
+        background-color: rgb(19, 19, 114);
       }
-
       nav ul{
         display: flex;
         justify-content: center;
       }
-
+      nav ul li{
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a{
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover{
+        color: yellow;
+        font-size: 1.05rem;
+      }
+      .left{
+        font-size: 1.5rem;
+      }
+      .firstsection{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 80px 0;
+      }
+      .firstsection > div{
+        width: 30%;
+      }
+      .leftsection{
+        font-size: 3rem;
+      }
+      .rightsection img{
+        width: 80%;
+        margin: 50px 0;
+      }
+      .purple{
+        color: aqua;
+      }
+      #element{
+        color: aqua;
+      }
     </style>
   </head>
   <body>
@@ -41,14 +76,34 @@
         <div class="left">Shivam's Portfolio</div>
         <div class="right">
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Projects</li>
-                <li>Contact me</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Project</a></li>
+                <li><a href="/">Contact</a></li>
             </ul>
         </div>
       </nav>
     </header>
+
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi this is <span class="purple">Shivam</span> 
+                <div>and I'm a Web Developer</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="pg.png" alt="">
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Debeloper', 'UI/UX Designer'],
+          typeSpeed: 50,
+        });
+      </script>
   </body>
 </html>
